@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuyAlcoholApp.MainPage">
+
+    <StackLayout Padding="20, 20, 20, 20">
+        <FlexLayout JustifyContent="Center">
+            <Label 
+                x:Name="Label_Years" 
+                Text="How Many Years Until I Am Legal? N/A" 
+                FontSize="20"
+                HorizontalTextAlignment="Center">
+            </Label>
+        </FlexLayout>
+        <FlexLayout AlignItems="Center">
+            <Label Text="Country: "></Label>
+	        <Picker x:Name="CountryPicker">
+		        <Picker.ItemsSource>
+			        <x:Array Type="{x:Type x:String}">
+				        <x:String>United States of America</x:String>
+				        <x:String>United Kingdom</x:String>
+				        <x:String>Canada</x:String>
+				        <x:String>Mexico</x:String>
+			        </x:Array>
+		        </Picker.ItemsSource>
+		        <Picker.SelectedIndex>0</Picker.SelectedIndex>
+	        </Picker>
+        </FlexLayout>
+        <FlexLayout AlignItems="Center">
+	        <Label Text="Birthday: "></Label>
+	        <DatePicker 
+		        x:Name="DatePicker" 
+		        DateSelected="OnSelectBirthday">
+	        </DatePicker>
+        </FlexLayout>
+    </StackLayout>
+
+</ContentPage>
